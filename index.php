@@ -1,4 +1,5 @@
 <?php
+        // 変更追加の練習
         // 時刻設定をアジアの東京に設定
         date_default_timezone_set('Asia/Tokyo'); 
 
