@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <!-- データを新規追加するためのフォーム -->
+    <form action="mission5.php" method="post">
+        <input type="text" name="name" placeholder="名前を入力">
+        <br>
+        <br>
+        <textarea name="comment" placeholder="コメントを入力"></textarea>
+        <br>
+        <br>
+        <input type="text" name="password" placeholder="パスワードを入力">
+        <input type="submit" value="保存">
+    </form>
+
+    <br>
+
+    <!-- すでに投稿のデータを削除するための投稿番号を入力するフォーム -->
+    <form action="mission5_del.php" method="post">
+        <input type="number" name="delete_num" placeholder="削除する投稿番号を入力">
+        <input type="password" name="check_password" placeholder="パスワードを入力">
+        <input type="submit" value="削除">
+    </form>
+
+    <br>
+
+    <!-- すでに投稿されている投稿のデータを編集するための投稿番号を入力するフォーム -->
+    <form action="mission5_edit.php" method="post">
+        <input type="number" name="edit_num"placeholder="編集する投稿番号を入力">
+        <input type="password" name="check_password" placeholder="パスワードを入力">
+        <input type="submit" value="編集">
+    </form>
+
+    <br>
+
+    <a href="index.php">投稿一覧ページへ</a>
+</body>
+</html>
