@@ -9,9 +9,15 @@
 
     ini_set('display_errors', 1);
 
-    $dsn = 'mysql:dbname=tb220104db;host=localhost;charset=utf8';
-    $user = 'tb-220104';
-    $password = 'TEywzDmNne';
+    $db = parse_url($_SERVER['CLEARDB_DATABASE_URL']);
+    // mysql://b39312ac74998b:e9d47d33@us-cdbr-east-02.cleardb.com/heroku_7a80758e1ac8797?reconnect=true
+
+    $db['dbname'] = ltrim($db['path'], '/');
+
+    $dsn = "mysql:dbname={$db['dbname']};host={$db['host']};charset=utf8";
+
+    $user = $db['user'];
+    $password = $db['pass'];
 
     try{
 
@@ -30,3 +36,4 @@
     // ----------------------------------------------------------
 
 ?>
+
