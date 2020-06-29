@@ -1,0 +1,8 @@
+{
+    "name": "msy/test",
+    "description": "lesson for php deproy",
+    "require": {
+    "php": "~7.0",
+    "ext-mbstring": "*"
+    }
+}
