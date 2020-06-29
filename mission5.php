@@ -20,8 +20,8 @@
 
     if($name != NULL && $comment != NULL && $password != NULL){
 
-        $sql = 'INSERT INTO tbpost (name, comment, created_at, password) VALUES (:name, :comment, :created_at, :password)';
-        $statement = $pdo->prepare($sql);
+        // (name, comment, created_at, password)
+        $statement = $pdo->prepare('INSERT INTO tbpost VALUES (:name, :comment, :created_at, :password)');
         $statement->bindParam(':name', $name, PDO::PARAM_STR);
         $statement->bindParam(':comment', $comment, PDO::PARAM_STR);
         $statement->bindParam(':created_at', $today);
