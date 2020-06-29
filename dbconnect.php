@@ -43,7 +43,7 @@
         // $sql = 'CREATE TABLE IF NOT EXISTS tbpost (id INT AUTO_INCREMENT PRIMARY KEY, name CHAR(32), comment TEXT, created_at DATETIME, password TEXT);';
 
         $sql = 'DROP TABLE IF EXIST tbpost';
-        $statement = $pdo->exec($sql);
+        $statement = $pdo->query($sql);
 
         $sql = 'CREATE TABLE IF NOT EXISTS tbpost (id INT AUTO_INCREMENT PRIMARY KEY, name CHAR(32), comment TEXT, created_at DATETIME, password TEXT);';
 
