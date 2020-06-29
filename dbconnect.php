@@ -40,7 +40,7 @@
 
         // DBのテーブルを作成するプログラムを作成
 
-        $sql = 'CREATE TABLE IF NOT EXISTS tbpost (id INT AUTO_INCREMENT PRIMARY KEY, name CHAR(32), comment TEXT, created_at DATETIME);';
+        $sql = 'CREATE TABLE IF NOT EXISTS tbpost (id INT AUTO_INCREMENT PRIMARY KEY, name CHAR(32), comment TEXT, created_at DATETIME, password TEXT);';
 
         $statement = $pdo->query($sql);
     
